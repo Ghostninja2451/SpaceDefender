@@ -80,12 +80,20 @@ public class PlayerController : MonoBehaviour
             Vector3 aimDirection = new Vector3(rotationTarget.x, 0, rotationTarget.y);
             if(aimDirection != Vector3.zero)
             {
-
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed);
             }
         }
         else
         {
-
+            Vector3 aimDirection = new Vector3(joystickLook.x, 0f, joystickLook.y);
+            if (aimDirection != Vector3.zero)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(aimDirection), rotationSpeed);
+            }
         }
+
+
+        Vector3 movement = new Vector3(move.x , 0f, move.y);
+        transform.Translate(movement * speed * Time.deltaTime, Space.World);
     }
 }
