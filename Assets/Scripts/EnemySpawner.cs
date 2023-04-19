@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 [Serializable]
 public class Enemy
@@ -8,11 +9,13 @@ public class Enemy
     public GameObject prefabs;
     [Range(0f, 100f)] public float possiblilty = 100;
     [HideInInspector] public double _weight;
+   
 
 }
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] Enemy[] enemies;
+    [SerializeField] float coolDownTimer = 3;
     private double accumulation;
     private System.Random ran = new System.Random();
 
