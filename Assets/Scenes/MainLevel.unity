@@ -452,6 +452,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8688273677761270285, guid: d3c1fcc436c0c144f912fac07b6de86a, type: 3}
   m_PrefabInstance: {fileID: 8688273678336109251}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1794291767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1794291768}
+  - component: {fileID: 1794291769}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1794291768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794291767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.8850392, y: -0.40002632, z: -1.5340099}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1794291769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794291767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67cd42c47071a7e4eba56b779faadfa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - prefabs: {fileID: 4424942645772650078, guid: 6ee479f78e5ee084495fd4036dc24daa, type: 3}
+    possiblilty: 20
+    _weight: 0
+  - prefabs: {fileID: 1510364872509504, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+    possiblilty: 80
+    _weight: 0
+  coolDownTimer: 3
 --- !u!1001 &8688273678336109251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -461,6 +513,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8688273677761270281, guid: d3c1fcc436c0c144f912fac07b6de86a, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688273677761270281, guid: d3c1fcc436c0c144f912fac07b6de86a, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8688273677761270285, guid: d3c1fcc436c0c144f912fac07b6de86a, type: 3}
