@@ -13,7 +13,7 @@ public class WeaponSystem : MonoBehaviour
     {
         GameObject bullets = Instantiate(bulletPrefabs, fireLocation.position, fireLocation.rotation);
         GameObject bullets2 = Instantiate(bulletPrefabs, fireLocation2.position, fireLocation2.rotation);
-        bullets.GetComponent<Rigidbody>().AddForce(fireLocation.forward * forcer, ForceMode.Impulse);
-        bullets2.GetComponent<Rigidbody>().AddForce(fireLocation2.forward * forcer, ForceMode.Impulse);
+        bullets.GetComponent<Rigidbody>().AddForce(fireLocation.forward * forcer * 10, ForceMode.Impulse);
+        bullets2.GetComponent<Rigidbody>().AddForce(fireLocation2.forward * forcer * 10, ForceMode.Impulse);
     }
 }

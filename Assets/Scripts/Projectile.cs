@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
 
     public void Update()
     {
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 3);
     }
     private void OnCollisionEnter(Collision collision)
     {
