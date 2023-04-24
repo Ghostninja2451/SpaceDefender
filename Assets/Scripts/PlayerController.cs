@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     {
         joystickLook = callbackContext.ReadValue<Vector2>();
     }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +60,9 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+
+
 
     public void movePlayer()
     {

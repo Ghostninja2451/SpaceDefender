@@ -15,7 +15,6 @@ public class Enemy
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] Enemy[] enemies;
-    [SerializeField] float coolDownTimer = 3;
     private double accumulation;
     private System.Random ran = new System.Random();
 
