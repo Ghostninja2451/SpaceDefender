@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2262291481494922309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.329, y: 0.13499975, z: 1.0419999}
+  m_LocalPosition: {x: -0.547, y: 0.13499975, z: 1.733}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4204353715931612185}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.263, y: 0.13499975, z: 1.0419999}
+  m_LocalPosition: {x: 0.434, y: 0.13499975, z: 1.733}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -129,7 +129,7 @@ MonoBehaviour:
   bulletPrefabs: {fileID: 522367559558457799, guid: 967e2adc6d1f74d49a0980a08d5ec4e9, type: 3}
   fireLocation: {fileID: 3269397226320673750}
   fireLocation2: {fileID: 3317243430637947051}
-  forcer: 50
+  forcer: 10000
 --- !u!33 &8688273677761270286
 MeshFilter:
   m_ObjectHideFlags: 0
