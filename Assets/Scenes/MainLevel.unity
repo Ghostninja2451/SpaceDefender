@@ -509,10 +509,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - prefabs: {fileID: 99655101827395726, guid: 9a3f9f848ba8a834188b5f4289633aa2, type: 3}
-    possiblilty: 100
+    possiblilty: 35
     _weight: 0
   - prefabs: {fileID: 1510364872509504, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
-    possiblilty: 0
+    possiblilty: 65
+    _weight: 0
+  - prefabs: {fileID: 8318662438994543348, guid: e186832966117a0408b6334cb65e478e, type: 3}
+    possiblilty: 10
     _weight: 0
 --- !u!1001 &8688273678336109251
 PrefabInstance:
