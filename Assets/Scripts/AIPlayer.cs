@@ -75,9 +75,11 @@ public class AIPlayer : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
+
         health -= damageAmount;
         if (health <= 0)
         {
+            TextModification.points++;
             Destroy(gameObject);
         }
     }
