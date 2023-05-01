@@ -49,9 +49,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe2c9e3a599a1f49a25a84a5bf6a3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 4
-  sightRange: 50
-  detectionRange: 50
+  health: 0
+  maxhealth: 100
+  maxSpeed: 5
+  sightRange: 100
+  detectionRange: 100
   rg: {fileID: 7219991626917185424}
   target: {fileID: 0}
 --- !u!33 &33144904916599870

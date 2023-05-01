@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class Healths : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] float maxHealth;
+    private float health;
+
+    public HealthBar healthBar;
     void Start()
     {
-        
+        health = maxHealth;
+        healthBar.SetSliderMax(maxHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Damage(float damage)
     {
-        
+        health -= damage;
+        healthBar.SetSlider(health);
+
+        if (health <= 0) 
+        {
+            Destroy(gameObject);
+        }
+
     }
+
+
 }

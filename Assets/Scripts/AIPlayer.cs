@@ -6,6 +6,9 @@ using UnityEngine.UIElements;
 
 public class AIPlayer : MonoBehaviour
 {
+    [SerializeField] float health;
+    [SerializeField] float maxhealth;
+
     [SerializeField] float maxSpeed;
     private float speed;
     
@@ -24,6 +27,7 @@ public class AIPlayer : MonoBehaviour
     void Start()
     {
         speed = maxSpeed;
+        health = maxhealth;
     }
 
     // Update is called once per frame
@@ -61,6 +65,20 @@ public class AIPlayer : MonoBehaviour
                     transform.forward = move;
                 }
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+    }
+
+    public void TakeDamage(float damageAmount)
+    {
+        health -= damageAmount;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

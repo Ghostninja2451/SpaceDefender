@@ -9,14 +9,15 @@ public class Enemy
     public GameObject prefabs;
     [Range(0f, 100f)] public float possiblilty = 100;
     [HideInInspector] public double _weight;
-   
-
 }
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] Enemy[] enemies;
+    [SerializeField] float spawnRate = 1f;
+    [SerializeField] bool canSpawn = true;
     private double accumulation;
     private System.Random ran = new System.Random();
+
 
     private void Awake()
     {
@@ -25,8 +26,20 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 20; i++)
+        StartCoroutine(Spawner());
+        //for (int i = 0; i < 20; i++)
+        //{
+        //    SpawnRandomEnemy(new Vector3(UnityEngine.Random.Range(-50, 50), 0, UnityEngine.Random.Range(-50, 50)));
+        //}
+    }
+
+    private IEnumerator Spawner()
+    {
+        WaitForSeconds wait = new WaitForSeconds(spawnRate);
+
+        while (canSpawn)
         {
+            yield return wait;
             SpawnRandomEnemy(new Vector3(UnityEngine.Random.Range(-50, 50), 0, UnityEngine.Random.Range(-50, 50)));
         }
     }
