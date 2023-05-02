@@ -22,6 +22,7 @@ public class AIPlayer : MonoBehaviour
     [SerializeField] GameObject target;
 
     private bool playerSpotted;
+    public static int points;
 
     // Start is called before the first frame update
     void Start()
@@ -79,7 +80,7 @@ public class AIPlayer : MonoBehaviour
         health -= damageAmount;
         if (health <= 0)
         {
-            TextModification.points++;
+            points++;
             Destroy(gameObject);
         }
     }

@@ -40,7 +40,7 @@ public class EnemySpawner : MonoBehaviour
         while (canSpawn)
         {
             yield return wait;
-            SpawnRandomEnemy(new Vector3(UnityEngine.Random.Range(-50, 50), 0, UnityEngine.Random.Range(-50, 50)));
+            SpawnRandomEnemy(new Vector3(UnityEngine.Random.Range(-30, 30), 0, UnityEngine.Random.Range(-30, 30)));
         }
     }
 

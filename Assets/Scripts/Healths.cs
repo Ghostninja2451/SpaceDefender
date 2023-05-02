@@ -16,6 +16,7 @@ public class Healths : MonoBehaviour
 
     public void Damage(float damage)
     {
+        
         health -= damage;
         healthBar.SetSlider(health);
 
