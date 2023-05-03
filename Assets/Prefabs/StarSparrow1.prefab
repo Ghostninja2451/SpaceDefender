@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxhealth: 100
+  damage: 10
   maxSpeed: 5
   sightRange: 100
   detectionRange: 100

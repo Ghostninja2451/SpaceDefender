@@ -16,6 +16,7 @@ public class Projectile : MonoBehaviour
         //Debug.Log("Hit");
         if (collision.gameObject.TryGetComponent<AIPlayer>(out AIPlayer enemyComponent))
         {
+            Debug.Log("AI hit");
             enemyComponent.TakeDamage(damage);
         }
         Destroy(gameObject);

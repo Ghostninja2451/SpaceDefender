@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -8,7 +9,7 @@ public class AIPlayer : MonoBehaviour
 {
     [SerializeField] float health;
     [SerializeField] float maxhealth;
-
+    [SerializeField] float damage;
     [SerializeField] float maxSpeed;
     private float speed;
     
@@ -20,15 +21,16 @@ public class AIPlayer : MonoBehaviour
 
     [SerializeField] Rigidbody rg;
     [SerializeField] GameObject target;
+    
 
     private bool playerSpotted;
-    public static int points;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = maxSpeed;
         health = maxhealth;
+        
     }
 
     // Update is called once per frame
@@ -71,16 +73,18 @@ public class AIPlayer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-
+        if(collision.gameObject.tag == "Player")
+        {
+            Healths.Instance.Damage(damage);
+            Destroy(gameObject);
+        }
     }
-
     public void TakeDamage(float damageAmount)
     {
-
         health -= damageAmount;
         if (health <= 0)
         {
-            points++;
+            TextModification.Instance.AddKill();
             Destroy(gameObject);
         }
     }
