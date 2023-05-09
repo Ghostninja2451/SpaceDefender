@@ -144,7 +144,7 @@ MonoBehaviour:
   bulletPrefabs: {fileID: 522367559558457799, guid: 967e2adc6d1f74d49a0980a08d5ec4e9, type: 3}
   fireLocation: {fileID: 3269397226320673750}
   fireLocation2: {fileID: 3317243430637947051}
-  forcer: 10000
+  forcer: 10
 --- !u!33 &8688273677761270286
 MeshFilter:
   m_ObjectHideFlags: 0
