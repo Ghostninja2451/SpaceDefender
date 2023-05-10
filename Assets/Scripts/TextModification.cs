@@ -32,7 +32,7 @@ public class TextModification : MonoBehaviour
             if (countDown <= 0)
             {
                 Debug.Log("Upgrade Enemy");
-                
+                AIPlayer.instance.Modificaiton(.3f, .1f);
                 countDown = 60f;
             }
             countDown -= Time.deltaTime;
@@ -50,4 +50,5 @@ public class TextModification : MonoBehaviour
         float seconds = Mathf.FloorToInt(timedisplay % 60);
         Timer.text = string.Format("{0:00} : {1:00}", minutes, seconds);
     }
+
 }

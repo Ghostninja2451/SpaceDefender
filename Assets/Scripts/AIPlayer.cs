@@ -7,10 +7,11 @@ using UnityEngine.UIElements;
 
 public class AIPlayer : MonoBehaviour
 {
+    public static AIPlayer instance;
     [SerializeField] float health;
-    [SerializeField] float maxhealth;
+    public float maxhealth;
     [SerializeField] float damage;
-    [SerializeField] float maxSpeed;
+    public float maxSpeed;
     private float speed;
     
     private Collider[] hitColliders;
@@ -28,6 +29,7 @@ public class AIPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         speed = maxSpeed;
         health = maxhealth;
         
@@ -87,5 +89,15 @@ public class AIPlayer : MonoBehaviour
             TextModification.Instance.AddKill();
             Destroy(gameObject);
         }
+    }
+
+    public void Modificaiton(float healthMod, float speedMod)
+    {
+        float newHealthMod = maxhealth * healthMod;
+        maxhealth += newHealthMod;
+        Debug.Log(maxhealth.ToString());
+
+        float newSpeedMod = maxSpeed * speedMod;
+        maxSpeed += newSpeedMod;
     }
 }

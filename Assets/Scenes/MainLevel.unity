@@ -862,7 +862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeRemaining: 0
   timeIsRunning: 1
-  countDown: 60
+  countDown: 10
   scoring: {fileID: 956514494}
   Timer: {fileID: 210195449}
 --- !u!1 &956514492
@@ -1314,6 +1314,10 @@ PrefabInstance:
     - target: {fileID: 1291423775069974713, guid: d3c1fcc436c0c144f912fac07b6de86a, type: 3}
       propertyPath: forcer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291423775069974713, guid: d3c1fcc436c0c144f912fac07b6de86a, type: 3}
+      propertyPath: laserEffects.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5932605055552306893, guid: d3c1fcc436c0c144f912fac07b6de86a, type: 3}
       propertyPath: healthBar

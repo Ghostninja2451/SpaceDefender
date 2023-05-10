@@ -34,12 +34,12 @@
                 },
                 {
                     "name": "Shooting",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "be81403b-afed-415a-a309-892862272d9c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": "Tap",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
