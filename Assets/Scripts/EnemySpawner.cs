@@ -15,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] Enemy[] enemies;
     [SerializeField] float spawnRate = 1f;
     [SerializeField] bool canSpawn = true;
+    [SerializeField] float countDown;
     private double accumulation;
     private System.Random ran = new System.Random();
 
@@ -32,7 +33,25 @@ public class EnemySpawner : MonoBehaviour
         //    SpawnRandomEnemy(new Vector3(UnityEngine.Random.Range(-50, 50), 0, UnityEngine.Random.Range(-50, 50)));
         //}
     }
+    private void Update()
+    {
+        if (countDown <= 0)
+        {
+            Modificaiton(.1f, .1f);
+            countDown = 60f;
+        }
+        countDown -= Time.deltaTime;
+    }
+    public void Modificaiton(float healthMod, float speedMod)
+    {
+        Debug.Log("Upgrade");
+        float newHealthMod = AIPlayer.instance.maxhealth * healthMod;
+        AIPlayer.instance.maxhealth += newHealthMod;
 
+        float newSpeedMod = AIPlayer.instance.maxSpeed * speedMod;
+        AIPlayer.instance.maxSpeed += newSpeedMod;
+
+    }
     private IEnumerator Spawner()
     {
         WaitForSeconds wait = new WaitForSeconds(spawnRate);

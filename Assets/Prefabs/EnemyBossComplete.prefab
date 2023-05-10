@@ -103,6 +103,7 @@ MonoBehaviour:
   maxhealth: 150
   damage: 50
   maxSpeed: 7
+  countDown: 10
   sightRange: 100
   detectionRange: 100
   rg: {fileID: 7327891574615309961}

@@ -9,7 +9,6 @@ public class TextModification : MonoBehaviour
     public static TextModification Instance;
     public float timeRemaining = 0;
     public bool timeIsRunning = true;
-    [SerializeField] float countDown;
     [SerializeField] TMP_Text scoring;
     [SerializeField] TMP_Text Timer;
     private int points = 0;
@@ -29,13 +28,7 @@ public class TextModification : MonoBehaviour
         {
             timeRemaining += Time.deltaTime;
             displayTime(timeRemaining);
-            if (countDown <= 0)
-            {
-                Debug.Log("Upgrade Enemy");
-                AIPlayer.instance.Modificaiton(.3f, .1f);
-                countDown = 60f;
-            }
-            countDown -= Time.deltaTime;
+
         }
     }
     public void AddKill()

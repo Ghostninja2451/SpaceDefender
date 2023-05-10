@@ -146,6 +146,7 @@ MonoBehaviour:
   fireLocation: {fileID: 3269397226320673750}
   fireLocation2: {fileID: 3317243430637947051}
   forcer: 10
+  rof: 0.15
   laserEffects1: {fileID: 6006124521795269484}
 --- !u!33 &8688273677761270286
 MeshFilter:
@@ -271,19 +272,7 @@ MonoBehaviour:
     m_ActionId: e30868e2-d06a-4058-aa12-8a71c26decd3
     m_ActionName: Player/New action
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1291423775069974713}
-        m_TargetAssemblyTypeName: WeaponSystem, Assembly-CSharp
-        m_MethodName: Fire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: be81403b-afed-415a-a309-892862272d9c
     m_ActionName: Player/Shooting[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
