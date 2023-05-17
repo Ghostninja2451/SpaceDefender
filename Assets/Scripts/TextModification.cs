@@ -11,6 +11,7 @@ public class TextModification : MonoBehaviour
     public bool timeIsRunning = true;
     [SerializeField] TMP_Text scoring;
     [SerializeField] TMP_Text Timer;
+    [SerializeField] TMP_Text mod;
     private int points = 0;
 
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class TextModification : MonoBehaviour
             displayTime(timeRemaining);
 
         }
+        displayModifier();
     }
     public void AddKill()
     {
@@ -43,5 +45,8 @@ public class TextModification : MonoBehaviour
         float seconds = Mathf.FloorToInt(timedisplay % 60);
         Timer.text = string.Format("{0:00} : {1:00}", minutes, seconds);
     }
-
+    public void displayModifier()
+    {
+        mod.text = "Mod \n" + "Health: " + AIPlayer.instance.maxhealth.ToString() + "\n" + "Speep: " + AIPlayer.instance.maxSpeed.ToString();
+    }
 }

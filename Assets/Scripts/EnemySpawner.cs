@@ -9,6 +9,7 @@ public class Enemy
     public GameObject prefabs;
     [Range(0f, 100f)] public float possiblilty = 100;
     [HideInInspector] public double _weight;
+    
 }
 public class EnemySpawner : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float countDown;
     private double accumulation;
     private System.Random ran = new System.Random();
+    private float newHealthMod;
+    private float newSpeedMod;
+    
 
 
     private void Awake()
@@ -28,6 +32,7 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(Spawner());
+
         //for (int i = 0; i < 20; i++)
         //{
         //    SpawnRandomEnemy(new Vector3(UnityEngine.Random.Range(-50, 50), 0, UnityEngine.Random.Range(-50, 50)));
@@ -45,12 +50,15 @@ public class EnemySpawner : MonoBehaviour
     public void Modificaiton(float healthMod, float speedMod)
     {
         Debug.Log("Upgrade");
-        float newHealthMod = AIPlayer.instance.maxhealth * healthMod;
+        newHealthMod = AIPlayer.instance.maxhealth * healthMod;
         AIPlayer.instance.maxhealth += newHealthMod;
 
-        float newSpeedMod = AIPlayer.instance.maxSpeed * speedMod;
+        newSpeedMod = AIPlayer.instance.maxSpeed * speedMod;
         AIPlayer.instance.maxSpeed += newSpeedMod;
-
+        Debug.Log(newSpeedMod.ToString());
+        Debug.Log(newHealthMod.ToString());
+        Debug.Log(AIPlayer.instance.maxSpeed.ToString());
+        Debug.Log(AIPlayer.instance.maxhealth.ToString());
     }
     private IEnumerator Spawner()
     {

@@ -8,11 +8,9 @@ using UnityEngine.UIElements;
 public class AIPlayer : MonoBehaviour
 {
     public static AIPlayer instance;
-    public float health;
     public float maxhealth;
     [SerializeField] float damage;
     public float maxSpeed;
-    public float speed;
     private Collider[] hitColliders;
     private RaycastHit hitRays;
     
@@ -21,7 +19,7 @@ public class AIPlayer : MonoBehaviour
 
     [SerializeField] Rigidbody rg;
     [SerializeField] GameObject target;
-    
+     
 
     private bool playerSpotted;
 
@@ -29,8 +27,7 @@ public class AIPlayer : MonoBehaviour
     void Start()
     {
         instance = this;
-        speed = maxSpeed;
-        health = maxhealth;
+
 
     }
 
@@ -64,7 +61,7 @@ public class AIPlayer : MonoBehaviour
                     var direction = head / distance;
 
 
-                    Vector3 move = new Vector3(direction.x * speed, 0, direction.z * speed);
+                    Vector3 move = new Vector3(direction.x * maxSpeed, 0, direction.z * maxSpeed);
                     rg.velocity = move;
                     transform.forward = move;
                 }
@@ -82,10 +79,11 @@ public class AIPlayer : MonoBehaviour
     }
     public void TakeDamage(float damageAmount)
     {
-        health -= damageAmount;
-        if (health <= 0)
+        maxhealth -= damageAmount;
+        if (maxhealth <= 0)
         {
             TextModification.Instance.AddKill();
+            ParticleSystemArray.instance.playAllParticleSystem();
             Destroy(gameObject);
         }
     }

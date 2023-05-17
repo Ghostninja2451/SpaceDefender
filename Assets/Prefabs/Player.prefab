@@ -146,7 +146,7 @@ MonoBehaviour:
   fireLocation: {fileID: 3269397226320673750}
   fireLocation2: {fileID: 3317243430637947051}
   forcer: 10
-  rof: 0.15
+  rof: 0.1
   laserEffects1: {fileID: 6006124521795269484}
 --- !u!33 &8688273677761270286
 MeshFilter:
