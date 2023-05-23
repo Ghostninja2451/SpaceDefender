@@ -7,20 +7,20 @@ using UnityEngine;
 public class Enemy
 {
     public GameObject prefabs;
+
     [Range(0f, 100f)] public float possiblilty = 100;
     [HideInInspector] public double _weight;
-    
+
+
 }
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] Enemy[] enemies;
     [SerializeField] float spawnRate = 1f;
     [SerializeField] bool canSpawn = true;
-    [SerializeField] float countDown;
     private double accumulation;
     private System.Random ran = new System.Random();
-    private float newHealthMod;
-    private float newSpeedMod;
+
     
 
 
@@ -40,26 +40,9 @@ public class EnemySpawner : MonoBehaviour
     }
     private void Update()
     {
-        if (countDown <= 0)
-        {
-            Modificaiton(.1f, .1f);
-            countDown = 60f;
-        }
-        countDown -= Time.deltaTime;
+       
     }
-    public void Modificaiton(float healthMod, float speedMod)
-    {
-        Debug.Log("Upgrade");
-        newHealthMod = AIPlayer.instance.maxhealth * healthMod;
-        AIPlayer.instance.maxhealth += newHealthMod;
 
-        newSpeedMod = AIPlayer.instance.maxSpeed * speedMod;
-        AIPlayer.instance.maxSpeed += newSpeedMod;
-        Debug.Log(newSpeedMod.ToString());
-        Debug.Log(newHealthMod.ToString());
-        Debug.Log(AIPlayer.instance.maxSpeed.ToString());
-        Debug.Log(AIPlayer.instance.maxhealth.ToString());
-    }
     private IEnumerator Spawner()
     {
         WaitForSeconds wait = new WaitForSeconds(spawnRate);

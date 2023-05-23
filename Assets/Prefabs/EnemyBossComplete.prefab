@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8663240984690677838}
+  - component: {fileID: 1273333232587178788}
   - component: {fileID: 5734727555246249963}
   - component: {fileID: 7525848241901413153}
   - component: {fileID: 1161486660267404423}
@@ -37,6 +38,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1273333232587178788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8318662438994543348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 916f068047bcccc41a7ee1116cdc12bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystems:
+  - {fileID: 8771670501639188489}
+  - {fileID: 8771670501639188491}
+  - {fileID: 8771670501639188485}
+  - {fileID: 8771670501639188487}
+  - {fileID: 8771670501639188481}
+  - {fileID: 8771670501639188483}
+  gobject: {fileID: 8318662438994543348}
 --- !u!33 &5734727555246249963
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -99,16 +120,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe2c9e3a599a1f49a25a84a5bf6a3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
   maxhealth: 150
   damage: 50
   maxSpeed: 7
-  speed: 0
   sightRange: 200
   detectionRange: 200
   rg: {fileID: 7327891574615309961}
   target: {fileID: 0}
-  particleSystemLocation: {fileID: 8771670501653637487}
 --- !u!54 &7327891574615309961
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -193,34 +211,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8512184525390773907, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
-      propertyPath: particleSystems.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8512184525390773907, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
-      propertyPath: particleSystems.Array.data[0]
-      value: 
-      objectReference: {fileID: 8771670501639188489}
-    - target: {fileID: 8512184525390773907, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
-      propertyPath: particleSystems.Array.data[1]
-      value: 
-      objectReference: {fileID: 8771670501639188491}
-    - target: {fileID: 8512184525390773907, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
-      propertyPath: particleSystems.Array.data[2]
-      value: 
-      objectReference: {fileID: 8771670501639188485}
-    - target: {fileID: 8512184525390773907, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
-      propertyPath: particleSystems.Array.data[3]
-      value: 
-      objectReference: {fileID: 8771670501639188487}
-    - target: {fileID: 8512184525390773907, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
-      propertyPath: particleSystems.Array.data[4]
-      value: 
-      objectReference: {fileID: 8771670501639188481}
-    - target: {fileID: 8512184525390773907, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
-      propertyPath: particleSystems.Array.data[5]
-      value: 
-      objectReference: {fileID: 8771670501639188483}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
 --- !u!198 &8771670501639188481 stripped
@@ -256,10 +246,5 @@ ParticleSystem:
 --- !u!4 &8771670501653345615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400012, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
-  m_PrefabInstance: {fileID: 8771670501653737411}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8771670501653637487 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100012, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
   m_PrefabInstance: {fileID: 8771670501653737411}
   m_PrefabAsset: {fileID: 0}

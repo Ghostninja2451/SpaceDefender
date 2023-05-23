@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 732357641712069172}
+  - component: {fileID: 2307106537507548407}
   - component: {fileID: 2274302265253578550}
   - component: {fileID: 4433231915541423505}
   - component: {fileID: 1901354369712230747}
@@ -37,6 +38,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2307106537507548407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99655101827395726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 916f068047bcccc41a7ee1116cdc12bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystems:
+  - {fileID: 3130657903545117694}
+  - {fileID: 3130657903545117692}
+  - {fileID: 3130657903545117680}
+  - {fileID: 3130657903545117682}
+  - {fileID: 3130657903545117686}
+  - {fileID: 3130657903545117684}
+  gobject: {fileID: 99655101827395726}
 --- !u!114 &2274302265253578550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,16 +70,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe2c9e3a599a1f49a25a84a5bf6a3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
   maxhealth: 30
   damage: 5
   maxSpeed: 8
-  speed: 0
   sightRange: 200
   detectionRange: 200
   rg: {fileID: 3150226567853327356}
   target: {fileID: 0}
-  particleSystemLocation: {fileID: 0}
 --- !u!33 &4433231915541423505
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -149,6 +167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explode
       objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -195,6 +217,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
+--- !u!198 &3130657903545117680 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800004, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
+  m_PrefabInstance: {fileID: 3130657903564649524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3130657903545117682 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800006, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
+  m_PrefabInstance: {fileID: 3130657903564649524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3130657903545117684 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800000, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
+  m_PrefabInstance: {fileID: 3130657903564649524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3130657903545117686 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800002, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
+  m_PrefabInstance: {fileID: 3130657903564649524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3130657903545117692 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800008, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
+  m_PrefabInstance: {fileID: 3130657903564649524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3130657903545117694 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800010, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}
+  m_PrefabInstance: {fileID: 3130657903564649524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3130657903564517048 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400012, guid: a905d8e5159ffeb46baa8d2a7624717f, type: 3}

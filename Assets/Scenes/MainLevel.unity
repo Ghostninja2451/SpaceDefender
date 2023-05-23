@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 123284152}
   - component: {fileID: 123284151}
+  - component: {fileID: 123284153}
   m_Layer: 0
   m_Name: EnemySpawner (1)
   m_TagString: Untagged
@@ -164,7 +165,6 @@ MonoBehaviour:
     _weight: 0
   spawnRate: 3
   canSpawn: 1
-  countDown: 10
 --- !u!4 &123284152
 Transform:
   m_ObjectHideFlags: 0
@@ -180,6 +180,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &123284153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123284150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2d3934dc1893045a37e3d15756cf9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDown: 10
 --- !u!1 &210195447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1794291768}
   - component: {fileID: 1794291769}
+  - component: {fileID: 1794291770}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -1445,6 +1459,18 @@ MonoBehaviour:
     _weight: 0
   spawnRate: 1
   canSpawn: 1
+--- !u!114 &1794291770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794291767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2d3934dc1893045a37e3d15756cf9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   countDown: 10
 --- !u!1001 &8688273678336109251
 PrefabInstance:
